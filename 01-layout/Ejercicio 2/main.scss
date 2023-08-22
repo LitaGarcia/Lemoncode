@@ -1,0 +1,42 @@
+@import './themes/theme-a.scss';
+//@import './themes/theme-b.scss';
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+
+    &__font{
+        &-primary{
+            font-family: $primary-font;
+        }
+        &-secondary{
+            font-family: $secondary-font;
+        }
+    }
+
+    &__box {
+        
+        &-base{
+            background-color: $primary-color;
+        };
+
+        &-warning{
+            background-color: $warning-color;
+        };
+
+        &-important{
+            background-color: $important-color;
+        };
+
+        &-shadow{
+            @include shadowed-box;
+        }
+    }
+}
+
+.box{
+    @include basic-box;
+}

@@ -1,0 +1,21 @@
+$primary-color: blue;
+$important-color: rgb(23, 23, 104);
+$warning-color: aqua;
+$primary-font: roboto;
+$secondary-font: arial;
+$box-shadow: -10px 9px 15px 5px #000000;
+$default-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+@mixin shadowed-box {
+    background-color: white;
+    box-shadow: $box-shadow;
+}
+
+@mixin basic-box {
+    width: 60px;
+    height: 50px;
+    padding: 10px;
+    border: solid 1px;
+    font-family: $default-font;
+    border-radius: 5px;
+}
