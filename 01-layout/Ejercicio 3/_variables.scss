@@ -1,0 +1,14 @@
+$primary-color: rgb(14, 131, 167);
+$secondary-color: rgb(6, 85, 109);
+$black: black;
+$white: white;
+$breakpoint-m: 640px;
+
+@mixin title-font {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 100;
+    @media (min-width: $breakpoint-m) {
+        font-size: 1rem;
+       }
+}

@@ -1,0 +1,55 @@
+@import './variables';
+
+*{
+    box-sizing: border-box;
+}
+
+.external-link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar__section{
+    border: solid 10px;
+    padding: 1rem 1rem 5rem;
+    width: 100%;
+
+    @media (min-width: $breakpoint-m) {
+        border: none;
+          }    
+
+    &-title{
+        @include title-font;
+        padding-left: 0.5rem;
+        
+        .external-link{
+            color: $black
+        }
+    }
+
+    &-menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    background-color: $primary-color;
+    padding: 0;
+
+    .external-link{
+        width: 100%;
+        padding: 1rem;
+        color: $white;
+        &:hover{
+            background-color: $secondary-color;
+        }
+        }
+
+    @media (min-width: $breakpoint-m) {
+      flex-direction: row;
+      justify-content: space-evenly
+        }    
+    }
+
+
+
+}
