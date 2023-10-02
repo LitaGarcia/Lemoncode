@@ -1,1 +1,0 @@
-{"mappings":"AAMA","sources":["01-layouyt/main.scss"],"sourcesContent":["$color-1: rgb(255, 0, 0);\n$color-2: blue;\n$color-3: green;\n\n$percentage: 10%;\n\n.box {\n    padding: 30px 20px;\n    border-radius: 5%;\n}\n"],"names":[],"version":3,"file":"index.ccc0463e.css.map","sourceRoot":"/__parcel_source_root/"}
