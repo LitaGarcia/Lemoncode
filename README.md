@@ -1,7 +1,7 @@
 # Lemoncode
 Personal Repository for Lemoncode Frontend Master projects
 
-##How to run it
+## How to run it
 
 Each module has its own dependencies. If you want to run any of them on your local machine, follow the steps below:
 
