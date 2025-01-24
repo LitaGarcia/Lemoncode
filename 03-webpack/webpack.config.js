@@ -1,29 +1,36 @@
-import HtmlWebpackPlugin  from 'html-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export default {
     entry: {
-        app: "./src/index.js"
+        app: "./src/index.ts"
     },
     output: {
         filename: "[name].[chunkhash].js",
         clean: true
     },
+    resolve: {
+        extensions: ['.ts', '.js']
+    },
     module: {
         rules: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: "babel-loader",
-          },
             {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                use: 'ts-loader',
+            },
+            {
+                test: /\.scss$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
             }
         ],
-      },
+    },
     devServer: {
-        port: 4200
+        port: 3000
     },
     plugins: [
         new HtmlWebpackPlugin({
