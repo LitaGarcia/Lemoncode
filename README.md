@@ -9,4 +9,17 @@ Each module has its own dependencies. If you want to run any of them on your loc
 
 - Module 2 : Install the dependencies in the corresponding folder and run npm run start
 
-- Module 3: Install all the dependencies and lately use npm run start
+- Module 3: Install all the dependencies and then use the following commands to run the project:
+
+    - **Development Mode**:
+      ```sh
+      npm run start:dev
+      ```
+      This will start the development server on port 3000 with the development environment settings.
+
+    - **Production Mode**:
+      ```sh
+      npm run build
+      npm run serve:prod
+      ```
+      This will build the project in production mode and start the server on port 5000 with the production environment settings.

@@ -1,12 +1,16 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import webpack from 'webpack';
+import dotenv from 'dotenv';
+
+const env = dotenv.config({ path: `./.env.${process.env.NODE_ENV}` }).parsed;
 
 export default {
     entry: {
-        app: "./src/index.ts"
+        app: './src/index.ts'
     },
     output: {
-        filename: "[name].[chunkhash].js",
+        filename: '[name].[chunkhash].js',
         clean: true
     },
     resolve: {
@@ -40,6 +44,9 @@ export default {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
+        }),
+        new webpack.DefinePlugin({
+            'process.env': JSON.stringify(env)
         })
     ]
-}
+};
